@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <MainContainer />
+    <HomePage />
   </div>
 </template>
 
 <script>
-import MainContainer from './components/MainContainer.vue'
+import HomePage from './components/HomePage.vue'
 import "./styles/main.scss"
 
 export default {
   name: 'app',
   components: {
-    MainContainer
+    HomePage
   }
 }
 </script>
