@@ -1,0 +1,42 @@
+.news-bar-container {
+  background-color: $black;
+  padding: 1.5rem 0;
+  padding-left: 3rem;
+  .content {
+    justify-content: center;
+    display: flex;
+    img {
+      margin-right: 1rem;
+      margin-top: 0.45rem;
+    }
+    p {
+      color: $white;
+      font-size: 14px;
+      font-family: "Graphik Light";
+      margin-right: 1rem;
+      span {
+        font-family: "Graphik Medium";
+      }
+    }
+    button {
+      font-family: "Graphik Regular";
+      background-color: $black;
+      text-transform: uppercase;
+      border-radius: 0.2rem;
+      border: 1px solid $green;
+      font-size: 12px;
+      padding: 0.5rem 1rem;
+      margin-right: 1.5rem;
+      letter-spacing: 0.1rem;
+      color: $green;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+    .green-button {
+      background-color: $green;
+      color: $white;
+    }
+  }
+}

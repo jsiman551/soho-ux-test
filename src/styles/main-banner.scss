@@ -1,0 +1,37 @@
+.main-banner-container {
+  background-image: url("/images/main-banner.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  .title-text {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 14rem;
+    p {
+      color: $white;
+      font-family: "Graphik Regular";
+      margin: 0;
+    }
+    .green-text {
+      color: $green;
+      font-family: "Graphik Medium";
+      font-size: 55px;
+    }
+    button {
+      background-color: $green;
+      color: $white;
+      font-family: "Graphik Regular";
+      text-transform: uppercase;
+      border: 0;
+      border-radius: 0.2rem;
+      padding: 1.5rem 3rem;
+      letter-spacing: 0.1rem;
+      margin-top: 4rem;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

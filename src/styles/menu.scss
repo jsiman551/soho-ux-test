@@ -1,0 +1,38 @@
+/*header menú styles*/
+.menu-container {
+  font-family: "Graphik Regular";
+  ul {
+    background-color: transparent;
+    list-style-type: none;
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0;
+    overflow: hidden;
+    li {
+      float: right;
+      a {
+        display: block;
+        color: $gray;
+        text-align: center;
+        padding: 30px 16px 5px;
+        text-decoration: none;
+        font-size: 18px;
+        &:hover:not(.active) {
+          color: $white;
+          font-family: "Graphik Medium";
+          border-bottom: 4px solid $green;
+        }
+      }
+    }
+  }
+  .logo {
+    float: left;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+  .active {
+    color: $white;
+    font-family: "Graphik Medium";
+    border-bottom: 4px solid $green;
+  }
+}
