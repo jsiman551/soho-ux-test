@@ -33,6 +33,11 @@
       ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
       nascetur ridiculus mus."
     />
+    <ProjectOne />
+    <ProjectTwo />
+    <ProjectThree />
+    <img class="footer-icon" src="/images/footer-logo.png">
+    <Footer />
   </div>
 </template>
 
@@ -41,6 +46,10 @@ import MainBanner from './MainBanner/index';
 import NewsBar from './NewsBar/index';
 import TitleSection from './TitleSection/index';
 import CardElement from './CardElement/index';
+import ProjectOne from './ProjectBanners/ProjectOne';
+import ProjectTwo from './ProjectBanners/ProjectTwo';
+import ProjectThree from './ProjectBanners/ProjectThree';
+import Footer from './Footer/index';
 
 export default {
   name: 'HomePage',
@@ -48,7 +57,11 @@ export default {
     MainBanner,
     NewsBar,
     TitleSection,
-    CardElement
+    CardElement,
+    ProjectOne,
+    ProjectThree,
+    ProjectTwo,
+    Footer
   }
 }
 </script>

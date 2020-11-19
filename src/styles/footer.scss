@@ -1,0 +1,72 @@
+.footer-container {
+  background-color: $black;
+  display: flex;
+  padding: 1rem 1.5rem;
+  @media (max-width: 767.9px) {
+    padding: 0;
+  }
+  .copyright {
+    width: 100%;
+    p {
+      color: $white;
+      font-family: "Graphik Extralight";
+      span {
+        font-family: "Graphik Medium";
+      }
+    }
+  }
+  .links {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    a {
+      color: $green;
+      font-family: "Graphik Light";
+      margin-right: 3rem;
+      @media (max-width: 767.9px) {
+        font-size: 12px;
+        margin-right: 0;
+      }
+      text-decoration: none;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .social-links {
+    width: 100%;
+    font-family: "Graphik Light";
+    text-align: right;
+    align-self: center;
+    a {
+      margin-right: 2rem;
+      @media (max-width: 767.9px) {
+        font-size: 12px;
+        margin-right: 0;
+      }
+      text-decoration: none;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .facebook {
+      color: $facebook;
+    }
+    .twitter {
+      color: $twitter;
+    }
+    .linkedin {
+      color: $linkedin;
+    }
+    .youtube {
+      color: $youtube;
+    }
+  }
+}
+.footer-icon {
+  position: relative;
+  left: 48%;
+  width: 50px;
+  bottom: -1.4rem;
+  margin-top: -40px;
+}
