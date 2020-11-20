@@ -33,15 +33,34 @@
       ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
       nascetur ridiculus mus."
     />
-    <ProjectOne />
-    <ProjectTwo />
-    <ProjectThree />
+    <ProjectOne 
+      :title="proyectos.data[0].title" 
+      :description="proyectos.data[0].description" 
+      :img="proyectos.data[0].img" 
+      :imgLogo="proyectos.data[0].imglogo" 
+      :imgTag="proyectos.data[0].imgtag"
+    />
+    <ProjectTwo 
+      :title="proyectos.data[1].title" 
+      :description="proyectos.data[1].description" 
+      :img="proyectos.data[1].img" 
+      :imgLogo="proyectos.data[1].imglogo" 
+      :imgTag="proyectos.data[1].imgtag" 
+    />
+    <ProjectThree 
+      :title="proyectos.data[2].title" 
+      :description="proyectos.data[2].description" 
+      :img="proyectos.data[2].img" 
+      :imgLogo="proyectos.data[2].imglogo" 
+      :imgTag="proyectos.data[2].imgtag" 
+    />
     <img class="footer-icon" src="/images/footer-logo.png">
     <Footer />
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import MainBanner from './MainBanner/index';
 import NewsBar from './NewsBar/index';
 import TitleSection from './TitleSection/index';
@@ -62,6 +81,16 @@ export default {
     ProjectThree,
     ProjectTwo,
     Footer
+  },
+  data () {
+    return {
+      proyectos: null
+    }
+  },
+  mounted () {
+    axios
+      .get('http://localhost/api.php?accion=mostrar-proyectos') /*proyectos destacados data*/
+      .then(response => (this.proyectos = response))
   }
 }
 </script>

@@ -1,20 +1,16 @@
 <template>
   <div class="project-banner-one-container">
-      <img src="/images/project-img-1.png" />
+      <img :src="img" />
       <div class="content">
-        <img src="/images/project-logo-1.png" />
+        <img :src="imgLogo" />
         <div class="divider" />
-        <h2>Sitio público y privado</h2>
+        <h2>{{title}}</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula aget dolor. Aenean massa.
-          Cum sociis natoque penatibus et magnis.
+          {{description}}
         </p>
         <div class="tags">
-          <img src="/images/project-tag-logo-1.png" />
-          <a href="#">usabilidad</a>
-          <a href="#">ui</a>
-          <a href="#">ux</a>
-          <a href="#">test con usuarios</a>
+          <img :src="imgTag" />
+          <a v-for="tag in tags.data" v-bind:key="tag" href="#">{{tag.descripcion}}</a>
         </div>
         <button>
           Ver Detalles
@@ -24,11 +20,26 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     name: 'ProjectOne',
-    /*props: {
+    props: {
         title: String,
-        description: String
-    }*/
+        description: String,
+        img: String,
+        imgLogo: String,
+        imgTag: String
+    },
+  data () {
+    return {
+      tags: null
+    }
+  },
+  mounted () {
+    axios
+      .get('http://localhost/api.php?accion=mostrar-tags&id-proyecto=1') /*data de tags filtrado por el id del proyecto destacado*/
+      .then(response => (this.tags = response)) 
+  }
 }
 </script>
