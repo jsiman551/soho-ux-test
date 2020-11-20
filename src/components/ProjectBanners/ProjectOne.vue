@@ -10,7 +10,7 @@
         </p>
         <div class="tags">
           <img :src="imgTag" />
-          <a v-for="tag in tags.data" v-bind:key="tag" href="#">{{tag.descripcion}}</a>
+          <a v-for="tag in tags.data" v-bind:key="tag.id" href="#">{{tag.descripcion}}</a>
         </div>
         <button>
           Ver Detalles
